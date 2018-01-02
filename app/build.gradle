@@ -24,6 +24,7 @@ android {
 }
 
 dependencies {
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$appcompat_version"
@@ -41,5 +42,22 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     api 'com.github.bumptech.glide:glide:4.4.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+
+    // Room
+    compile 'android.arch.persistence.room:runtime:1.0.0-alpha9-1'
+    compile 'android.arch.persistence.room:rxjava2:1.0.0-alpha9-1'
+    kapt "android.arch.persistence.room:compiler:1.0.0-alpha9-1"
+
+    // RXJava
+    compile 'io.reactivex.rxjava2:rxjava:2.1.2'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //Firebase
+    implementation "com.google.firebase:firebase-core:$firebase_version"
+    implementation "com.google.firebase:firebase-database:$firebase_version"
+    implementation "com.google.firebase:firebase-auth:$firebase_version"
+    implementation "com.google.firebase:firebase-messaging:$firebase_version"
+    implementation "com.google.firebase:firebase-invites:$firebase_version"//fire store
+
 }
 apply plugin: 'com.google.gms.google-services'
